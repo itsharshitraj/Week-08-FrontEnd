@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox-Photo-Gallery</title>
+  <style>
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      flex-direction: row;
+      justify-content: center; /* Center images */
+      gap: 10px; /* Space between images */
+      overflow: auto; /* Prevents overflow */
+      padding: 10px;
+    }
+    .cards img {
+      width: calc(100% / 4 - 20px); /* Adjust to fit 4 images per row */
+      height: 200px; /* Ensure consistent height */
+      object-fit: cover; /* Crop images neatly */
+      border: 3px solid #000;
+      box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+    }
+    @media (max-width: 768px) {
+      .cards img {
+        width: calc(100% / 2 - 20px); /* 2 per row on smaller screens */
+      }
+    }
+    @media (max-width: 480px) {
+      .cards img {
+        width: 100%; /* Full width on very small screens */
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="cards">
+    <img src="/Flexbox-Photo-Gallery/asset/22m.jpg" alt="Sample photo">
+    <img src="/Flexbox-Photo-Gallery/asset/23m.jpg" alt="Sample photo">
+    <img src="/Flexbox-Photo-Gallery/asset/24m.jpg" alt="Sample photo">
+    <img src="/Flexbox-Photo-Gallery/asset/27m.jpg" alt="Sample photo">
+    <img src="/Flexbox-Photo-Gallery/asset/28m.jpg" alt="Sample photo">
+    <img src="/Flexbox-Photo-Gallery/asset/29m.jpg" alt="Sample photo">
+    <img src="/Flexbox-Photo-Gallery/asset/30m.jpg" alt="Sample photo">
+    <img src="/Flexbox-Photo-Gallery/asset/33m.jpg" alt="Sample photo">
+    
+  </main>
+</body>
+</html>
